@@ -47,7 +47,8 @@ endif
 
 CC=gcc
 CPP=g++
-NVCC=nvcc 
+NVCC=/usr/local/cuda-8.0/bin/nvcc
+#NVCC=nvcc 
 OPTS=-Ofast
 LDFLAGS= -lm -pthread 
 COMMON= 
