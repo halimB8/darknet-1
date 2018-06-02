@@ -515,7 +515,7 @@ void draw_detections_cv_v3(IplImage* show_img, detection *dets, int num, float t
 			color.val[0] = red * 256;
 			color.val[1] = green * 256;
 			color.val[2] = blue * 256;
-
+if(bot>300 && bot<340){
 			//you should create directory: result_img
 			static int copied_frame_id = -1;
 			static IplImage* copy_img = NULL;
@@ -531,7 +531,7 @@ void draw_detections_cv_v3(IplImage* show_img, detection *dets, int num, float t
 			CvRect rect = cvRect(pt1.x, pt1.y, pt2.x - pt1.x, pt2.y - pt1.y);
 			cvSetImageROI(copy_img, rect);
 			cvSaveImage(image_name, copy_img, 0);
-			cvResetImageROI(copy_img);
+			cvResetImageROI(copy_img);}
 
 			cvRectangle(show_img, pt1, pt2, color, width, 8, 0);
 			if (ext_output)
